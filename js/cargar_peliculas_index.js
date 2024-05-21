@@ -52,9 +52,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
         pelicula.appendChild(tituloPelicula);
         tituloPelicula.appendChild(titulo);
         tendenciasContainer.appendChild(ancla);
-      
     });
-
     // Actualizamos el atributo data-page con el número de página actual
     tendenciasContainer.parentElement.setAttribute('data-page', page);
 };
@@ -84,6 +82,7 @@ const cargarPeliculasAclamadas = async () => {
         // relaciono los elementos
         peliculaItem.appendChild(img);
         aclamadasContainer.appendChild(peliculaItem);
+        console.log(movie);
     });
 };
 
