@@ -698,6 +698,7 @@ body{
             column-gap: 60px;
             img{
               border-radius: 20px;
+              width: clamp(18rem, 60% ,25rem); /* agregado para el tamaño de imagen del poster */
             }
             .textoDetalle{
                 h1{

@@ -15,6 +15,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
     const data = await response.json(); // Convertimos la respuesta a JSON
     const movies = data.results;// Extraemos las películas de la respuesta
     //console.log(movies);
+    localStorage.setItem('pelis', JSON.stringify(movies));
     const tendenciasContainer = document.querySelector('.peliculasTendencia .peliculas');// Seleccionamos el contenedor de películas de tendencia en el DOM, la section que tiene dentro el div peliculas
     tendenciasContainer.innerHTML = '';// Limpiamos el contenido previo del contenedor
 
@@ -43,6 +44,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
         // creo el div tituloPelicula
         const tituloPelicula = document.createElement('div');
         tituloPelicula.classList.add('tituloPelicula');
+        tituloPelicula.dataset.id = `${movie.id}`;
         // creo el h4
         const titulo = document.createElement('h4');
         titulo.textContent = movie.title;
@@ -114,4 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarPeliculasTendencia();
     // Cargamos las películas en el carrusel de películas aclamadas
     cargarPeliculasAclamadas();
+});
+
+
+/*---------------------------------Se agrego evento para captura id y peliculas en el localstorage----------------------------------------------*/
+// container de peliculas en index
+const tendenciasContainer = document.getElementById("tendenciasContainer");
+tendenciasContainer.addEventListener("click", (e) => {
+  //console.log(e.target);
+   // Obtén el elemento en el que se hizo clic
+  let clickedElement = e.target.closest('.tituloPelicula');;
+  //console.log(clickedElement.getAttribute('data-id'));
+  localStorage.setItem('detalles', JSON.stringify(clickedElement.getAttribute('data-id')));
+  if (clickedElement.classList.contains('.tituloPelicula')) {
+    // Supongamos que tienes los detalles de la película en atributos de datos
+    let detalles = {
+        idPeli: clickedElement.getAttribute('data-id')
+    };
+    //console.log(detalles.idPeli);
+    // Guarda los detalles en localStorage como una cadena JSON
+    localStorage.setItem('detalles', JSON.stringify(detalles.idPeli));
+} 
 });
