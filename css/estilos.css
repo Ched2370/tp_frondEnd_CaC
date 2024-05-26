@@ -689,7 +689,8 @@ body{
         background-position: center;
         height: 70vh;
         .contenedorDetalle{
-            width:70%;
+            width: 90%;
+            height: 90%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -697,7 +698,8 @@ body{
             column-gap: 60px;
             img{
               border-radius: 20px;
-              width: clamp(18rem, 60% ,25rem); /* agregado para el tamaño de imagen del poster */
+              width: 60%; /* agregado para el tamaño de imagen del poster */
+              height: 60%;
               transition: all 1s;
             }
             img:hover{
@@ -853,4 +855,104 @@ hr{
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
+}
+
+/* -----Secion register - Guille --------- */
+.bodyRegistrarse{
+    height: 100vh;
+    background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+    .headerRegistrarse{
+        color:#ffffff;
+        height: 8vh;
+        padding:30px;
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+           
+        }
+    }
+    .main{
+        
+        .seccionRegistrarse{
+            background-color:rgb(42, 42, 42);
+            width: 25%;
+            margin:0 auto;
+            border-radius: 5px;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+            font-size:1.2rem;
+            .tituloRegistrarse{
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            
+            form{
+                width: 90%;
+                padding:40px;
+                input:not(.check,.boton),select{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    height: 40px;
+                    padding: 0px;
+                    font-size: 1.2rem;
+                    border-radius: 30px;
+                    border: 2px solid #9f3647;
+                    background-color: #333333;
+                    outline: none;
+                    color:rgb(255, 255, 255);
+                }
+                .error input:not(.check,.boton),.error select{
+                    border: 1px solid #ff0000;
+                }
+                .error-text{
+                    color: #ff0000;
+                    font-size: 0.8rem;
+                    margin-top:0px;
+                    margin-bottom: 10px;
+                }
+              
+                .terminos{
+                    color:rgb(255, 255, 255);
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .textoCheck{
+                        margin-left: 10px;
+                    }
+                }
+                .boton{
+                    width: 88%;
+                    box-sizing: content-box;
+                    background-color:#9f3647;
+                    border: 2px solid #9f3647;
+                    color: #ffffff;
+                    padding: 1rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                   
+                }
+                .ayuda{
+                    margin-top:40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight:400;
+                   
+                }
+            }
+           
+        }
+   
+    }
 }
