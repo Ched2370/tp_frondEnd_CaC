@@ -60,6 +60,8 @@ body{
         margin-right: 40px;
         padding: 1.5rem 0;
         .anclaLogo{
+            display: flex;
+            justify-content: center;
             text-decoration: none;
             color: #ffffff;
             font-weight: 700;
@@ -67,6 +69,9 @@ body{
             /* logo */
             img{
                 width: 5vh;
+            }
+            span{
+                margin: auto;
             }
             /*animacion hover*/
             &:hover{
@@ -758,6 +763,15 @@ body{
         justify-content: space-between;
         align-items: center;
         column-gap: 70px;
+        .contenedorTrailer{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                cursor: pointer;
+            }
+        }
         .contenedorInfo{
             .redes{
                 margin-bottom: 20px;

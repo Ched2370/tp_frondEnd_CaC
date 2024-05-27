@@ -13,6 +13,10 @@ imgLogo.src = '../assets/img/Pelis_Script.png'
 imgLogo.alt = 'Pelis_Script';
 aContainerLogo.appendChild(imgLogo);
 
+const spanSitio = document.createElement('span');
+spanSitio.textContent = 'Pelis_Script';
+aContainerLogo.appendChild(spanSitio);
+
 const ulMenu = document.createElement('ul');
 ulMenu.classList = 'listaNav';
 nav.appendChild(ulMenu);
