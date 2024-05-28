@@ -886,4 +886,135 @@ hr{
     margin-top: 40px;
 }
 
+/* Estilos para pagina de inicio de Sesion Maicol Perez*/
+.bodyiniciosesion {
+    
+    margin: 0;
+    background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#form-wrapper {
+    width: 17%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+}
+
+.tituloIniciarSesion {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-control {
+    width: 90%;
+    padding: 40px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid #9f3647;
+    border-radius:20px;
+    box-sizing:content-box;
+    background-color: #333333;
+    color: #ffffff;
+    margin-bottom: 15px;
+    
+}
+
+button[type="submit"] {
+    width: 88%;
+    box-sizing:border-box;
+    background-color: #9f3647;
+    border: 2px solid #9f3647;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #9f3600;
+}
+
+.form-help, .registrarse {
+    margin-top: 10px;
+    text-align: center;
+    color: #787878;
+    font-weight: 400;
+}
+
+.form-help a, .registrarse a {
+    color: #b3b0b0;
+    text-decoration: none;
+}
+
+.form-help a:hover, .registrarse a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+    
+}
+
+/* Media queries para tabletas y teléfonos celulares */
+@media screen and (max-width: 768px) {
+    #form-wrapper {
+        width: 90%; /* Ajusta el ancho para dispositivos más pequeños */
+    }
+
+    .tituloIniciarSesion {
+        font-size: 2rem; /* Ajusta el tamaño de la fuente para dispositivos más pequeños */
+    }
+
+    .form-control {
+        padding: 20px; /* Ajusta el relleno para dispositivos más pequeños */
+    }
+
+    .form-control input {
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+    }
+
+    button[type="submit"] {
+        padding: 0.8rem 0.8rem; /* Ajusta el relleno para dispositivos más pequeños */
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente para dispositivos más pequeños */
+    }
+
+    .form-help, .registrarse {
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente para dispositivos más pequeños */
+    }
+}
 
